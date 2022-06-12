@@ -1,0 +1,123 @@
+:root {
+    --text-primary: #FDF7E1;
+    --text-secondary: #5f6368;
+
+    --bg-primary: #fff;
+    --bg-secondary: #f0f0f0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a,
+a:hover {
+    color: unset;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.layout {
+    min-width: 400px;
+    min-height: 300px;
+    padding: 1rem;
+}
+
+.title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.input {
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 32px;
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    transition: all 0.3s;
+    margin-right: 0.5rem;
+}
+
+.hint {
+    padding-left: 12px;
+
+    color: #06f;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+    text-decoration: none;
+}
+
+.button {
+    color: #fff;
+    background: #06f;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid #06f;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    color: #fff;
+    border-color: #2986ff;
+    background: #2986ff;
+}
+
+.form {
+    margin-bottom: 0.25rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.result-link {
+    
+}
