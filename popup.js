@@ -27,14 +27,11 @@ const input = document.getElementById('input');
 const useCurrentTabHint = document.getElementById('useCurrentTabHint');
 const resultLink = document.getElementById('resultLink');
 
-console.log({ submitButton, input });
-
 useCurrentTabHint.onclick = async () => {
     chrome.tabs.query({
         active: true,
         currentWindow: true
     }, ([currentTab]) => {
-        console.log(currentTab.url);
         if (currentTab && currentTab.url) {
             input.value = currentTab.url
         }
@@ -46,7 +43,9 @@ submitButton.onclick = async () => {
         const data = await sendRequest('api/docs/', 'POST', { url: input.value });
         console.log(data);
 
-        resultLink.innerHTML = data.ar_id;
+        if (data && data.ar_id) {
+            resultLink.innerHTML = data.ar_id;
+        }
     }
 }
 
