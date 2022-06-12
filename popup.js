@@ -1,4 +1,5 @@
-const baseURL = 'http://84.252.137.43:8000'
+const baseURL = 'http://84.252.137.43:8000';
+const resultText = 'Ознакомиться с полной аналитикой';
 
 const sendRequest = async (url, method, data) => {
     try {
@@ -43,9 +44,11 @@ submitButton.onclick = async () => {
         const data = await sendRequest('api/docs/', 'POST', { url: input.value });
         console.log(data);
 
-        if (data && data.ar_id) {
-            resultLink.innerHTML = data.ar_id;
-        }
+        resultLink.innerHTML = `${resultText}: http://84.252.137.43:8000/`//''
+        resultLink.setAttribute('href', `http://84.252.137.43:8000/`);
+
+        // if (data && data.ar_id) {
+        // }
     }
 }
 

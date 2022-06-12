@@ -119,5 +119,14 @@ a:hover {
 }
 
 .result-link {
-    
+    display: flex;
+    padding: 12px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #06f;
+}
+
+.result-link:hover {
+    text-decoration: underline;
+    color: #06f;
 }
