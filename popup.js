@@ -1,5 +1,6 @@
 const baseURL = 'http://84.252.137.43:8000';
 const resultText = 'Ознакомиться с полной аналитикой';
+const submitButtonText = 'Анализировать';
 
 const sendRequest = async (url, method, data) => {
     try {
@@ -41,14 +42,13 @@ useCurrentTabHint.onclick = async () => {
 
 submitButton.onclick = async () => {
     if (input.value) {
+        submitButton.innerHTML = `<i class="fa fa-circle-o-notch fa-spin"></i>Загрузка`;
         const data = await sendRequest('api/docs/', 'POST', { url: input.value });
         console.log(data);
 
-        resultLink.innerHTML = `${resultText}: http://84.252.137.43:8000/`//''
+        resultLink.innerHTML = `${resultText}: http://84.252.137.43:8000/`;
         resultLink.setAttribute('href', `http://84.252.137.43:8000/`);
-
-        // if (data && data.ar_id) {
-        // }
+        submitButton.innerHTML = submitButtonText;
     }
 }
 
